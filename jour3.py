@@ -76,13 +76,13 @@ def moy(exe) :
 
 moy(exe)
 
-# 3
-
-
-
-
-
 # 4
+
+
+
+20
+
+# 3
 
 def index_max(exe) :
 
@@ -98,7 +98,7 @@ print ( texte.count ("e"))
 
 # 6
 
-nee = 1
+n = 1
 
 def check_positive(n) : 
 
@@ -109,7 +109,9 @@ def check_positive(n) :
         print ( "Negative" )   
 
     else :
-        print ( "Neutre" )
+        
+        return    print ( "Neutre" )
+
 
 # 7
 
@@ -173,24 +175,21 @@ print(new_list)
 
 # exercice 4 
 
-x = 63
-y = 27
+x = []
 
 def multipl (x) :
     
- if x%9 == 0 :
+    tuile = [23, 60 , 45, 17, 27, 81] :
 
-    y = x/9 
-    return print("x est bien un multiple de 9")
+    if x % 9 == 0 :
+
+       x = x/9 
     
-    print(y)
+    else :
 
- else :
-
-    return print("x ,'est pas un multiple de 9")
-    y = x-9
+        x = x-9
      
-print (multipl(y))
+print (multipl(x))
 
 # exercice 5 
 
@@ -205,11 +204,16 @@ print (multipl(y))
 
 # 6
 
-list_nom = [ "moi", "toi", "lui"]
+classe = [ "Alexandre", "Clement ", "Adriane", "Bastien"," Leo", "romuald" ]
 
-def choix_al (list_nom) :
+def select_random (classe) :
+
+    return random.choice(classe)
+
+print ( "le nom choisi est ", select_random(classe))
+
     
-    (random.choices )
+
 
 
 

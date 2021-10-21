@@ -119,7 +119,10 @@ else :
 
 print (b)
 
+a = [1,4,9,6,3,5,4,2,4,5,4,9,4]
+x = 0
 
+[x for x in a if x > 5]
 
-
+print(x)
 

@@ -63,9 +63,9 @@ for a in list_prenom :
 exe = [1, 2, 3, 4, 5, 6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 
 # 1
-def somme(exe) :
+def somme() :
     
-    return print (sum(exe))
+    return print (sum())
 
 somme(exe)
 
@@ -175,21 +175,21 @@ print(new_list)
 
 # exercice 4 
 
-x = []
+#x = []
 
-def multipl (x) :
+#def multipl (x) :
     
-    tuile = [23, 60 , 45, 17, 27, 81] :
+#    tuile = [23, 60 , 45, 17, 27, 81] 
 
-    if x % 9 == 0 :
+#    if x % 9 == 0 :
 
-       x = x/9 
+#       x = x/9 
     
-    else :
+#    else :
 
-        x = x-9
+#        x = x-9
      
-print (multipl(x))
+#print (multipl(x))
 
 # exercice 5 
 

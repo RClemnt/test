@@ -3,8 +3,53 @@ from random import *
 
 import random
 
-watigang = 2
-winx =0
+
+
+choices = ["pierre", "feuille", "ciseaux"]
+watigang = 0
+winx = 0
+
+
+while  not watigang + winx == 3 :
+
+    b = random.choice(choices)
+    r =  random.choice(choices)
+    #print ( r , b)
+
+    if r == "feuille"  and b == "pierre" :
+        winx +=1
+        #print(winx)
+
+    if b == "feuille" and r == "pierre" :
+        watigang += 1
+        #print(watigang)
+
+    if b == "ciseaux" and r == "feuille" :
+        watigang +=1
+        #print(watigang)
+
+    if r == "ciseaux" and b == "feuille" :
+        winx += 1
+        #print(winx)
+
+    if r == "pierre" and b == "ciseaux" :
+        winx+=1
+        #print(winx)
+
+    if b == "pierre"  and r == "ciseaux" :
+        watigang += 1
+        #print(watigang)
+    
+#print( winx , watigang)
+
+
+if watigang  >=2 :
+    print ( "L'equipe WatiGang commence la phase de pick et ban. ")
+    
+elif winx >=2:
+    print ( " L'equipe Winx commence la phase de pick et ban. ")
+
+
 
 
 champions =[
@@ -50,85 +95,50 @@ print ( "le champion choisi est ", select_random(copie_champ))
 
 
 
-copie_champ = list(champions)
-if watigang or winx >= 2 :
-    for i in range (3) :
-        #print ( "entrer")
-        select_ban.append ( select_random ( copie_champ) )
-            
-    copie_champ = [elem for elem in champions if elem not in select_ban]
+def ban() :
 
-    #print (copie_champ)
-    #print ( len(copie_champ))
+    copie_champ = list(champions)
 
-    if watigang or winx <= 1 :
+    if watigang or winx >= 2 :
+        
+
         for i in range (3) :
             #print ( "entrer")
+
             select_ban.append ( select_random ( copie_champ) )
-                
+
+            
         copie_champ = [elem for elem in champions if elem not in select_ban]
 
         #print (copie_champ)
         #print ( len(copie_champ))
 
-        print ( " fin de la phase des bans. ")
+    if watigang or winx <= 1 :
 
-        pool_champ = list(copie_champ)
-        
+        for i in range (3) :
+            #print ( "entrer")
 
-    if  watigang  >= 2 :
+            select_ban.append ( select_random ( copie_champ) )
             
-        watigang1.append ( select_random ( pool_champ) )
+        copie_champ = [elem for elem in champions if elem not in select_ban]
 
-        #print(watigang1)
+        #print (copie_champ)
+        #print ( len(copie_champ))
 
-        pool_champ = [elem for elem in pool_champ if elem not in watigang1]
-            
-        #print (pool_champ)
-        #print ( len(pool_champ))
-        #print ( watigang1)
+    return print ( " fin de la phase des bans. ")
 
-        for i in range (2) :
+ban()
 
-            winx1.append ( select_random ( pool_champ) )
-
-            pool_champ = [elem for elem in pool_champ if elem not in winx1]
-
-            #print ( winx1 )
-        
-        for i in range (2) :
-
-            watigang1.append ( select_random ( pool_champ) )
-
-            pool_champ = [elem for elem in pool_champ if elem not in watigang1]
-
-            #print ( watigang1 )
-        
-        for i in range (2) :
-
-            winx1.append ( select_random ( pool_champ) )
-
-            pool_champ = [elem for elem in pool_champ if elem not in winx1]
-
-            #print ( winx1 )
-        
-        for i in range (2) :
-
-            watigang1.append ( select_random ( pool_champ) )
-
-            pool_champ = [elem for elem in pool_champ if elem not in watigang1]
-
-            #print ( watigang1 )
-
-        else :
-
-            winx1.append ( select_random ( pool_champ) )
-
-            pool_champ = [elem for elem in pool_champ if elem not in winx1]
-
-            #print ( winx1 )
+#
 
 
-print ( "Equipe Winx" , len(winx1), winx1  )
-print ( "Equipe Watigang", len(watigang1), watigang1)
+
+
+
+
+
+
+
+
+
 
